@@ -1,28 +1,46 @@
 # CFD Analysis of Turbomachinery Flow (Master Thesis)
 
 ## Overview
-CFD analysis of turbomachinery using URANS simulations and Python post-processing
 
-This repository contains the work developed for my Master’s Thesis in Aerospace Engineering, focused on the numerical analysis of internal flows in turbomachinery using Computational Fluid Dynamics (CFD).
+This project investigates the aerodynamic impact of distorted inflow on a circular section of a compressor blade cascade using CFD simulations.
 
-The main objective of the study is to analyze the aerodynamic performance of a turbomachinery stage and evaluate key performance parameters such as pressure ratio, efficiency, and flow behavior under different operating conditions.
+The study focuses on performance degradation, flow instability, and non-uniform rotor loading under distorted inflow conditions typical of modern turbofan engines.
 
 ---
 
 ## Objectives
-- Perform CFD simulations of turbomachinery flow
-- Analyze velocity, pressure, and Mach number distributions
-- Evaluate global performance parameters (efficiency, pressure ratio, work coefficient)
-- Investigate flow structures and losses
+- Analyse the effects of flows non-uniformities on a blade row
+- Reproduce inlet distortion using total pressure deficit
+- Evaluate impact on efficiency and total pressure ratio (TPR)
+- Analyze flow instability and unsteady behavior
+- Develop a quasi-2D reduced-cost CFD approach for a preliminary study
 
 ---
 
 ## Numerical Setup
-- **Solver:** ANSYS Fluent
-- **Approach:** URANS (Unsteady Reynolds-Averaged Navier-Stokes)
-- **Turbulence model:** k-ω standard | k-epsilon con enhanced wall treatment | Spallart Almaras
-- **Mesh:** Structured | Coarse () | Medium () | Fine ()
+- **Solver:** Density-based CFD solver with ANSYS Fluent
+- **Models:**
+  - RANS (steady, single passage) for choice of turbulence model and mesh sensitivity
+  - RANS (steady, full annulus) for refernce simulations
+  - URANS (unsteady, full annulus) to better capture the introduction of the distortion
+- **Turbulence model:** k-ω standard | k-epsilon con enhanced wall treatment | Spalart-Allmaras
+- **Mesh:**
+  - Structured
+  - y+ ≈< 1
+  - Coarse (38700 Cells) | Medium (64029 Cells) | Fine (138447 Cells)
 - **Boundary conditions:** Total pressure inlet / Static pressure outlet
+- **Distortion cases:**
+  - Sector: 30°, 60°, 90°
+  - Total pressure deficit: 10% for case 2 (104 kPa) and 20% for case 1 (100 kPa)
+
+---
+## Results
+
+- Inlet distortion reduces mass flow rate and alters compressor performance
+- Efficiency variation strongly depends on operating conditions
+- Significant non-uniform rotor loading observed
+- Shock waves shift upstream with increased intensity
+- High distortion cases show vortex shedding and increased unsteadiness
 
 ---
 
@@ -39,4 +57,12 @@ Main outputs:
 
 ---
 
-## Repository Structure
+## Key skills
+
+- CFD (RANS / URANS)
+- Turbomachinery aerodynamics
+- Mesh sensitivity analysis
+- Turbulence model selection
+- Post-processing and data analysis
+- HPC usage (CINECA)
+- Linux-based workflow automation
