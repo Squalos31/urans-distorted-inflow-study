@@ -77,9 +77,9 @@ Main outputs:
 </p>
 
 <p align="center">
-  <img src="eta_full_annulus_map.pdf" width="600">
+  <img src="eta_full_annulus_map.png" width="600">
 </p>
 
 <p align="center">
-  <img src="riepilogo_unsteady_barre_cases.pdf" width="600">
+  <img src="riepilogo_unsteady_barre_cases.png" width="600">
 </p>
