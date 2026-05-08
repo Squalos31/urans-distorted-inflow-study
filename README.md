@@ -1,72 +1,125 @@
-# CFD Analysis of Turbomachinery Flow (Master Thesis)
+# CFD Investigation of Inlet Distortion Effects on a Compressor Blade Row
 
-## Overview
+## Project Overview
 
-This project investigates the aerodynamic impact of distorted inflow on a circular section of a compressor blade cascade using CFD simulations.
+This work investigates the aerodynamic impact of inlet total pressure distortion on a compressor blade cascade representative of modern turbomachinery applications.
 
-The study focuses on performance degradation, flow instability, and non-uniform rotor loading under distorted inflow conditions typical of modern turbofan engines.
+The study focuses on performance degradation, flow instability, and non-uniform rotor loading under distorted inflow conditions typical of high-performance aero-engine architectures.
+
+The objective is to quantify how inlet distortion affects compressor efficiency, pressure ratio, and unsteady flow structures using a combination of steady and unsteady CFD methodologies.
 
 ---
 
 ## Objectives
-- Analyse the effects of flows non-uniformities on a blade row
-- Reproduce inlet distortion using total pressure deficit
-- Evaluate impact on efficiency and total pressure ratio (TPR)
-- Analyze flow instability and unsteady behavior
-- Develop a quasi-2D reduced-cost CFD approach for a preliminary study
+
+- Quantify erodynamic penalties induced by inlet flow distortion
+- Reproduce irealistic total pressure distortion patterns at compressor inlet
+- Assess impact on:
+  - Total pressure ratio (TPR)
+  - Isentropic efficiency
+  - Mass flow rate
+- Investigate unsteady flow mechanisms linked to distortion propagation
+- Develop a reduced-cost CFD strategy suitable for early design phase analysis
 
 ---
 
-## Numerical Setup
-- **Solver:** Density-based CFD solver with ANSYS Fluent
-- **Models:**
-  - RANS (steady, single passage) for choice of turbulence model and mesh sensitivity
-  - RANS (steady, full annulus) for refernce simulations
-  - URANS (unsteady, full annulus) to better capture the introduction of the distortion
-- **Turbulence model:** k-ω standard | k-epsilon con enhanced wall treatment | Spalart-Allmaras
-- **Mesh:**
-  - Structured
-  - y+ ≈< 1
-  - Coarse (38700 Cells) | Medium (64029 Cells) | Fine (138447 Cells)
-- **Boundary conditions:** Total pressure inlet / Static pressure outlet
-- **Distortion cases:**
-  - Sector: 30°, 60°, 90°
-  - Total pressure deficit: 10% for case 2 (104 kPa) and 20% for case 1 (100 kPa)
+## Numerical Methodology
+
+### Solver and Numerical Framework
+- ANSYS Fluent (density-based solver)
+- Fully compressible formulation
+
+### Turbulence Modelling
+- k-ω standard
+- k-ε with enhanced wall treatment 
+- Spalart–Allmaras 
+
+### Mesh Strategy
+- Structured topology
+- Near-wall resolution: y⁺ < 1
+- Grid independence assessment:
+  - Coarse: 38,700 cells  
+  - Medium: 64,029 cells  
+  - Fine: 138,447 cells  
+
+### Boundary Conditions
+- Total pressure inlet with imposed distortion sector
+- Static pressure outlet
+
+### Inlet Distortion Definition
+- Sector amplitudes: 30°, 60°, 90°
+- Total pressure deficit levels:
+  - 10% (104 kPa)
+  - 20% (100 kPa)
 
 ---
-## Results
 
-- Inlet distortion reduces mass flow rate and alters compressor performance
-- Efficiency variation strongly depends on operating conditions
-- Significant non-uniform rotor loading observed
-- Shock waves shift upstream with increased intensity
-- High distortion cases show vortex shedding and increased unsteadiness
+## Simulation Strategy
+
+To ensure physical consistency and computational efficiency, three levels of fidelity were adopted:
+
+- **Steady RANS (single passage):**
+  Turbulence model selection and mesh sensitivity study
+
+- **Steady RANS (full annulus):**
+  Baseline reference solution without time dependency
+
+- **URANS (full annulus):**
+  Time-resolved simulation capturing:
+  - Distortion transport
+  - Unsteady rotor loading
+  - Flow separation and vortex dynamics
 
 ---
 
-## Post-Processing
-Post-processing was performed using:
-- ANSYS CFD-Post
-- Python scripts for data analysis and visualization
+## Key Findings
 
-Main outputs:
-- Pressure ratio evolution
-- Efficiency trends
+- Inlet distortion leads to a measurable reduction in compressor mass flow rate and overall performance
+- Efficiency degradation is strongly dependent on distortion intensity and operating condition
+- Significant circumferential non-uniformity in rotor loading is observed
+- Shock system displacement is detected under high distortion cases
+- Unsteady simulations reveal:
+  - Vortex shedding phenomena
+  - Localised flow separation
+  - Enhanced temporal fluctuations in pressure and velocity fields
+
+---
+
+## Post-Processing and Data Analysis
+
+Post-processing was carried out using Paraview and custom Python automation scripts developed for batch processing and quantitative evaluation.
+
+Extracted metrics include:
+- Pressure ratio evolution across operating points
+- Isentropic efficiency maps
 - Mach number distributions
-- Time-averaged flow fields
+- Time-resolved URANS field analysis
+- Distortion propagation tracking
 
 ---
 
-## Key skills
+## Computational Environment
 
-- CFD (RANS / URANS)
-- Turbomachinery aerodynamics
-- Mesh sensitivity analysis
-- Turbulence model selection
-- Post-processing and data analysis
-- HPC usage (CINECA)
+- High Performance Computing (HPC) on CINECA infrastructure
 - Linux-based workflow automation
+- Batch simulation management and post-processing scripting
+- Parallel execution of multi-case parametric studies
 
+---
+
+## Core Technical Skills Demonstrated
+
+- CFD (RANS / URANS) applied to turbomachinery flows
+- Aerodynamic analysis of compressor cascades
+- Mesh independence and numerical verification
+- Turbulence modelling assessment and selection
+- High-fidelity post-processing and data reduction
+- HPC computing workflows (CINECA)
+- Linux environment and automation scripting (Python-based pipeline)
+
+---
+
+## Selected Results
 
 <p align="center">
   <img src="axial_velocity_30_100.gif" width="600">
