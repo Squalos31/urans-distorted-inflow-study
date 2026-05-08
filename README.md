@@ -69,6 +69,6 @@ Main outputs:
 
 
 <p align="center">
-  <img src="axial_velocity_30_100.gif" width="800">
+  <img src="axial_velocity_30_100.gif" width="600">
 </p>
 
