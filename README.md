@@ -67,4 +67,8 @@ Main outputs:
 - HPC usage (CINECA)
 - Linux-based workflow automation
 
-![Mach contour animation](axial_velocity_30_100.gif)
+
+<p align="center">
+  <img src="axial_velocity_30_100.gif" width="800">
+</p>
+
