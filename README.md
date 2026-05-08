@@ -72,3 +72,14 @@ Main outputs:
   <img src="axial_velocity_30_100.gif" width="600">
 </p>
 
+<p align="center">
+  <img src="cascade_med_med_spal_98000_RELATIVE_MACH.png" width="600">
+</p>
+
+<p align="center">
+  <img src="eta_full_annulus_map.pdf" width="600">
+</p>
+
+<p align="center">
+  <img src="riepilogo_unsteady_barre_cases.pdf" width="600">
+</p>
