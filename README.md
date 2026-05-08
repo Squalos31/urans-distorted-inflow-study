@@ -77,7 +77,7 @@ Main outputs:
 </p>
 
 <p align="center">
-  <img src="eta_full_annulus_map.png" width="600">
+  <img src="eta_full_annulus_map.png" width="800">
 </p>
 
 <p align="center">
