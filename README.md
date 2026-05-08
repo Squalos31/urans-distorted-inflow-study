@@ -66,3 +66,5 @@ Main outputs:
 - Post-processing and data analysis
 - HPC usage (CINECA)
 - Linux-based workflow automation
+
+![Mach contour animation](images/velocità assiale 100 30.gif)
