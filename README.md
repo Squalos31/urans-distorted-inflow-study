@@ -4,9 +4,11 @@
 
 This work investigates the aerodynamic impact of inlet total pressure distortion on a compressor blade cascade representative of modern turbomachinery applications.
 
-The study focuses on performance degradation, flow instability, and non-uniform rotor loading under distorted inflow conditions typical of high-performance aero-engine architectures.
+The study focuses on performance degradation, flow instability, and non-uniform rotor loading under distorted inflow conditions typical of High Bypass Ratio (HBPR) turbofan engines.
 
-The objective is to quantify how inlet distortion affects compressor efficiency, pressure ratio, and unsteady flow structures using a combination of steady and unsteady CFD methodologies.
+<p align="center">
+  <img src="axial_velocity_30_100.gif" width="600">
+</p>
 
 ---
 
@@ -70,6 +72,20 @@ To ensure physical consistency and computational efficiency, three levels of fid
   - Unsteady rotor loading
   - Flow separation and vortex dynamics
 
+Turbolence model selection
+        ↓
+Mesh Sensitivity
+        ↓
+Steady RANS Validation
+        ↓
+Full-Annulus Setup
+        ↓
+URANS Simulations on HPC (CINECA)
+        ↓
+Python Automated Post-Processing
+        ↓
+Performance Parameters Extraction
+
 ---
 
 ## Key Findings
@@ -121,18 +137,59 @@ Extracted metrics include:
 
 ## Selected Results
 
-<p align="center">
-  <img src="axial_velocity_30_100.gif" width="600">
-</p>
+### Summary of mass flow rate, TPR, and efficiency for all the considered cases
 
 <p align="center">
-  <img src="cascade_med_med_spal_98000_RELATIVE_MACH.png" width="600">
+  <img src="riepilogo_unsteady_barre_cases.png" width="600">
 </p>
+
+- Reduction of the normalized mass flow rate up to 3% for the most severe distortion case.
+- Smaller distortion sectors showed a stronger impact compared to wider sectors.
+- Although a slight increase in the efficiency was observed in some operating conditions, the overall performace degraded compared to the associated mass flow rate in clean conditions.
+
+
+### Efficiency Characteristic Map
 
 <p align="center">
   <img src="eta_full_annulus_map.png" width="800">
 </p>
 
+- Inlet distortion progressively shifted the operating points toward near-stall conditions as the distorted sector increased.
+- A reduction in normalized mass flow rate was observed for all distorted configurations.
+- Operating points located below the reference curve highlighted the overall compressor performance degradation caused by the distorted inflow.
+
+
+### Relative Mach number Distribution - Case 1, Sector 90°
+
 <p align="center">
-  <img src="riepilogo_unsteady_barre_cases.png" width="600">
+  <img src="pressure_field.png" width="600">
 </p>
+
+- Local pressure and velocity peaks developed near the interface between distorted and clean inlet regions.
+- The flow progressively recovered downstream of the blade passage within the clean sector.
+- Non-uniform flow structures generated circumferential aerodynamic loading variations along the cascade.
+
+
+### Axial Velocity Evolution - Case 1, Sector 30°
+
+<p align="center">
+  <img src="axial_velocity_30_100.gif" width="600">
+</p>
+
+- Flow evolution highlighted alternating high- and low-velocity wake structures downstream of the blade row, Von Kármán vortex street.
+- Boundary layer thickening and local flow instability contributed to increased aerodynamic losses.
+
+---
+
+## Tools & Technologies
+
+- ANSYS Fluent
+- ANSYS Meshing
+- Python Linux
+- HPC CINECA
+- ParaView
+- URANS RANS
+- Turbomachinery CFD
+- Post-processing automation
+
+---
