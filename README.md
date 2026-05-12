@@ -7,7 +7,7 @@ This work investigates the aerodynamic impact of inlet total pressure distortion
 The study focuses on performance degradation, flow instability, and non-uniform rotor loading under distorted inflow conditions typical of High Bypass Ratio (HBPR) turbofan engines.
 
 <p align="center">
-  <img src="axial_velocity_30_100.gif" width="600">
+  <img src="results/axial_velocity_30_100.gif" width="600">
 </p>
 
 ---
@@ -119,7 +119,7 @@ Main automated tasks:
 
 Example:
 
-`post_processing/read_speedline_full_anulus_mappa_github.py`
+[`post_processing/characteristic_map.py`](post_processing/characteristic_map.py)
 
 ---
 
@@ -148,7 +148,7 @@ Example:
 ### Summary of mass flow rate, TPR, and efficiency for all the considered cases
 
 <p align="center">
-  <img src="riepilogo_unsteady_barre_cases.png" width="600">
+  <img src="results/riepilogo_unsteady_barre_cases.png" width="600">
 </p>
 
 - Reduction of the normalized mass flow rate up to 3% for the most severe distortion case.
@@ -159,7 +159,7 @@ Example:
 ### Efficiency Characteristic Map
 
 <p align="center">
-  <img src="eta_full_annulus_map.png" width="800">
+  <img src="results/eta_full_annulus_map.png" width="800">
 </p>
 
 - Inlet distortion progressively shifted the operating points toward near-stall conditions as the distorted sector increased.
@@ -170,7 +170,7 @@ Example:
 ### Relative Mach number Distribution - Case 1, Sector 90°
 
 <p align="center">
-  <img src="Mach_rel_avg_100_90.png" width="600">
+  <img src="results/Mach_rel_avg_100_90.png" width="600">
 </p>
 
 - Local pressure and velocity peaks developed near the interface between distorted and clean inlet regions.
@@ -181,7 +181,7 @@ Example:
 ### Axial Velocity Evolution - Case 1, Sector 30°
 
 <p align="center">
-  <img src="axial_velocity_30_100.gif" width="600">
+  <img src="results/axial_velocity_30_100.gif" width="600">
 </p>
 
 - Flow evolution highlighted alternating high- and low-velocity wake structures downstream of the blade row, Von Kármán vortex street.
