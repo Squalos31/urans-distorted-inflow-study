@@ -105,11 +105,21 @@ Extracted metrics include:
 
 ## Automated Post-Processing Pipeline
 
-- Batch extraction of compressor performance parameters
+Python scripts were developed to automate the extraction and visualization of performance parameters from simulation results datasets.
+
+Main automated tasks:
 - Automated generation of characteristic maps
+- Total pressure ratio computation
+- Efficiency trend comparison
+- Multi-case data management
+- Circumferential parameter evaluation 
 - Time-resolved URANS data analysis
 - Python-based workflow automation for multi-case simulations
 - HPC data handling and post-processing
+
+Example:
+
+`post_processing/read_speedline_full_anulus_mappa_github.py`
 
 ---
 
@@ -125,11 +135,9 @@ Extracted metrics include:
 ## Key Findings
 
 - Inlet distortion leads to a measurable reduction in compressor mass flow rate and overall performance
-- Efficiency degradation is strongly dependent on distortion intensity and operating condition
+- Efficiency degradation is dependent on distortion intensity and operating condition
 - Significant circumferential non-uniformity in rotor loading is observed
-- Shock system displacement is detected under high distortion cases
 - Unsteady simulations reveal:
-  - Vortex shedding phenomena
   - Localised flow separation
   - Enhanced temporal fluctuations in pressure and velocity fields
 
