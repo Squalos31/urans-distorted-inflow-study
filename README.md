@@ -7,7 +7,7 @@ This work investigates the aerodynamic impact of inlet total pressure distortion
 The study focuses on performance degradation, flow instability, and non-uniform rotor loading under distorted inflow conditions typical of High Bypass Ratio (HBPR) turbofan engines.
 
 <p align="center">
-  <img src="results/axial_velocity_30_100.gif" width="600">
+  <img src="axial_velocity_30_100.gif" width="600">
 </p>
 
 ---
@@ -181,7 +181,7 @@ Example:
 ### Axial Velocity Evolution - Case 1, Sector 30°
 
 <p align="center">
-  <img src="results/axial_velocity_30_100.gif" width="600">
+  <img src="axial_velocity_30_100.gif" width="600">
 </p>
 
 - Flow evolution highlighted alternating high- and low-velocity wake structures downstream of the blade row, Von Kármán vortex street.
