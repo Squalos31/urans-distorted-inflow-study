@@ -72,6 +72,7 @@ To ensure physical consistency and computational efficiency, three levels of fid
   - Unsteady rotor loading
   - Flow separation and vortex dynamics
 
+```text
 Turbolence model selection
         ↓
 Mesh Sensitivity
@@ -85,19 +86,7 @@ URANS Simulations on HPC (CINECA)
 Python Automated Post-Processing
         ↓
 Performance Parameters Extraction
-
----
-
-## Key Findings
-
-- Inlet distortion leads to a measurable reduction in compressor mass flow rate and overall performance
-- Efficiency degradation is strongly dependent on distortion intensity and operating condition
-- Significant circumferential non-uniformity in rotor loading is observed
-- Shock system displacement is detected under high distortion cases
-- Unsteady simulations reveal:
-  - Vortex shedding phenomena
-  - Localised flow separation
-  - Enhanced temporal fluctuations in pressure and velocity fields
+```
 
 ---
 
@@ -114,6 +103,16 @@ Extracted metrics include:
 
 ---
 
+## Automated Post-Processing Pipeline
+
+- Batch extraction of compressor performance parameters
+- Automated generation of characteristic maps
+- Time-resolved URANS data analysis
+- Python-based workflow automation for multi-case simulations
+- HPC data handling and post-processing
+
+---
+
 ## Computational Environment
 
 - High Performance Computing (HPC) on CINECA infrastructure
@@ -123,15 +122,16 @@ Extracted metrics include:
 
 ---
 
-## Core Technical Skills Demonstrated
+## Key Findings
 
-- CFD (RANS / URANS) applied to turbomachinery flows
-- Aerodynamic analysis of compressor cascades
-- Mesh independence and numerical verification
-- Turbulence modelling assessment and selection
-- High-fidelity post-processing and data reduction
-- HPC computing workflows (CINECA)
-- Linux environment and automation scripting (Python-based pipeline)
+- Inlet distortion leads to a measurable reduction in compressor mass flow rate and overall performance
+- Efficiency degradation is strongly dependent on distortion intensity and operating condition
+- Significant circumferential non-uniformity in rotor loading is observed
+- Shock system displacement is detected under high distortion cases
+- Unsteady simulations reveal:
+  - Vortex shedding phenomena
+  - Localised flow separation
+  - Enhanced temporal fluctuations in pressure and velocity fields
 
 ---
 
@@ -162,7 +162,7 @@ Extracted metrics include:
 ### Relative Mach number Distribution - Case 1, Sector 90°
 
 <p align="center">
-  <img src="pressure_field.png" width="600">
+  <img src="Mach_rel_avg_100_90.png" width="600">
 </p>
 
 - Local pressure and velocity peaks developed near the interface between distorted and clean inlet regions.
@@ -178,6 +178,18 @@ Extracted metrics include:
 
 - Flow evolution highlighted alternating high- and low-velocity wake structures downstream of the blade row, Von Kármán vortex street.
 - Boundary layer thickening and local flow instability contributed to increased aerodynamic losses.
+
+---
+
+## Core Technical Skills Demonstrated
+
+- CFD (RANS / URANS) applied to turbomachinery flows
+- Aerodynamic analysis of compressor cascades
+- Mesh independence and numerical verification
+- Turbulence modelling assessment and selection
+- High-fidelity post-processing and data reduction
+- HPC computing workflows (CINECA)
+- Linux environment and automation scripting (Python-based pipeline)
 
 ---
 
